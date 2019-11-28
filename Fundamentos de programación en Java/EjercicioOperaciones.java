@@ -1,3 +1,8 @@
+/*------------------------------------------------
+Crea un proyecto llamado EjercicioOperaciones en el que se muestre en pantalla todas las posibles operaciones aritméticas que se 
+pueden hacer con dos números enteros, dos números reales y con un número entero y uno real.
+El programa pide al usuario por teclado los dos valores para hacer los calculos.
+--------------------------------------------------*/
 package proyecto1ejerciciooperaciones;
 
 import java.io.BufferedReader;
@@ -5,9 +10,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- *
- * @author Daniela Torres López
+ * @author Daniela Torres López.
  */
+
 public class Proyecto1EjercicioOperaciones {
 
     /**
