@@ -6,13 +6,13 @@ El programa pide al usuario por teclado los dos valores para hacer los calculos.
 package proyecto1ejerciciooperaciones;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
- * @author Daniela Torres López.
+ *
+ * @author Daniela Torres López
  */
-
 public class Proyecto1EjercicioOperaciones {
 
     /**
@@ -20,29 +20,48 @@ public class Proyecto1EjercicioOperaciones {
      */
     public static void main(String[] args) throws Exception {
         // TODO code application logic here
-        //int a;
-        //int b;
-        
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String a = br.readLine();
-        String b = br.readLine();
-      
-        
-        //System.out.println((int)b+(int)a);
-        System.out.println("Suma entera: " + (Integer.parseInt(a)+Integer.parseInt(b)));
-        System.out.println("Resta entera: " + (Integer.parseInt(a)-Integer.parseInt(b)));
-        System.out.println("Multiplicación entera: " + (Integer.parseInt(a)*Integer.parseInt(b)));
-        System.out.println("División entera: " + (Integer.parseInt(a)/Integer.parseInt(b)));
-        System.out.println("Modulo entero: " + (Integer.parseInt(a)%Integer.parseInt(b)));
-        
-        System.out.println("Suma real: " + (Double.parseDouble(a)+Double.parseDouble(b)));
-        System.out.println("Resta real: " + (Double.parseDouble(a)-Double.parseDouble(b)));
-        System.out.println("Multiplicación real: " + (Double.parseDouble(a)+Double.parseDouble(b)));
-        System.out.println("División real: " + (Double.parseDouble(a)+Double.parseDouble(b)));
-        System.out.println("Modulo real: " + (Double.parseDouble(a)+Double.parseDouble(b)));
-        
-        //c = (int)a+(int)b;
-         
-    }
-    
+        int opc = 1;
+        do{ /*----Bucle para hacer otra operación----*/
+            
+            System.out.println(" Introduzca dos números ");
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            Scanner reader = new Scanner(System.in);
+            /* La entrada es en formato cadena */
+            String a = br.readLine();
+            String b = br.readLine();
+            /*--- Conversión de String a Double para realizar la suma entera por si algún número contiene punto. ---*/
+            double A = Double.parseDouble(a);
+            double B = Double.parseDouble(b);
+            
+            /*---------Muestra de operaciones aritméticas con números enteros---------*/
+            
+            System.out.println("Suma entera: " + ((int)A+(int)B));
+            System.out.println("Resta entera: " + ((int)A-(int)B));
+            System.out.println("Multiplicación entera: " + ((int)A*(int)B));
+            System.out.println("División entera: " + ((int)A/(int)B));
+            System.out.println("Modulo entero: " + ((int)A%(int)B));
+            System.out.println("------------------------------------------------");
+            
+            /*---------Muestra de operaciones aritméticas con números reales ---------*/
+            System.out.println("Suma real: " + (A+B));
+            System.out.println("Resta real: " + (A-B));
+            System.out.println("Multiplicación real: " + (A*B));
+            System.out.println("División real: " + (A/B));
+            System.out.println("Modulo real: " + (A%B));
+            System.out.println("------------------------------------------------");
+            
+            /*---------Muestra de operaciones aritméticas mixtas------------*/
+            System.out.println("Suma mixta: " + ((int)A+B));
+            System.out.println("Resta mixta: " + ((int)A-B));
+            System.out.println("Multiplicación mixta: " + ((int)A*B));
+            System.out.println("División mixta: " + ((int)A/B));
+            System.out.println("Modulo mixta: " + ((int)A%B));
+            System.out.println("------------------------------------------------");
+            
+            /*----Salida de bucle----*/
+            System.out.println("¿De nuevo? (1 - SÍ)(0 - NO)");
+            opc = reader.nextInt();
+            
+        }while(opc==1);
+    }  
 }
